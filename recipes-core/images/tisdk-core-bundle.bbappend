@@ -1,4 +1,4 @@
-PR:append = ".psdk3"
+PR:append = ".psdk4"
 
 DEPLOY_IMAGES_NAME:append:am64xx-evm = " \
     tiboot3-am64x_sr2-hs-fs-evm.bin \
@@ -43,8 +43,8 @@ DEPLOY_IMAGES_NAME:append:am62xx-lp-evm = " \
 
 DEPLOY_IMAGES_NAME:append:am65xx-evm = " \
     tiboot3.bin \
-    sysfw-am65x_sr2-evm.itb \
-    sysfw-am65x-evm.itb \
+    sysfw-am65x_sr2-gp-evm.itb \
+    sysfw-am65x_sr2-hs-evm.itb \
     ti-sci-firmware-am65x_sr2-gp.bin \
 "
 
