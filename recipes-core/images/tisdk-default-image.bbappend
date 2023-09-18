@@ -1,4 +1,4 @@
-PR:append = ".psdk1"
+PR:append = ".psdk3"
 
 IMAGE_INSTALL:remove:am65xx = " \
     packagegroup-arago-tisdk-matrix \
@@ -6,9 +6,7 @@ IMAGE_INSTALL:remove:am65xx = " \
 "
 
 IMAGE_INSTALL:append:am65xx = " \
-    docker \
     packagegroup-arago-gst-sdk-target \
-    packagegroup-python3-jupyter \
 "
 
 IMAGE_INSTALL:append:am64xx = " \

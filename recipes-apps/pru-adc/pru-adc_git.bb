@@ -9,7 +9,7 @@ inherit update-alternatives
 COMPATIBLE_MACHINE = "am335x-evm"
 
 PV = "1.0"
-PR = "r2"
+PR = "r3"
 
 BRANCH = "master"
 SRC_URI = "git://git.ti.com/apps/tida01555.git;protocol=git;branch=${BRANCH}"
@@ -37,7 +37,11 @@ do_install() {
     sed -i 's|./ARM_User_Space_App.out|/usr/bin/pru-adc-arm-app.out|g' ${D}${bindir}/run-pru-adc.sh
 }
 
-FILES:${PN} = "${base_libdir}/firmware"
+FILES:${PN} = " \
+    ${base_libdir}/firmware \
+    ${bindir}/run-pru-adc.sh \
+    ${bindir}/pru-adc-arm-app.out \
+"
 
 ALTERNATIVE_TARGET:pru-adc[am335x-pru0-fw] = "/lib/firmware/pru/PRU_ADS8688_Controller.out"
 ALTERNATIVE_TARGET:pru-adc[am335x-pru1-fw] = "/lib/firmware/pru/PRU_ADS8688_Interface.out"

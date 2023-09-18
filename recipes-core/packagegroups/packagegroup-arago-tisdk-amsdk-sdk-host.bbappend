@@ -1,4 +1,4 @@
-PR:append = ".psdk5"
+PR:append = ".psdk6"
 
 # Choose the kernel and u-boot recipe sources to use
 UBOOT_SRC = "${PREFERRED_PROVIDER_virtual/bootloader}-src"
@@ -15,3 +15,5 @@ EXTRA_FILES:prepend = "\
      ${KERNEL_SRC} \
      ${@oe.utils.conditional('KERNEL_SHADOW_CLONE_ENABLED','true','unshallow-repositories','',d)} \
 "
+
+EXTRA_FILES:remove:am65xx = "uboot-flash-writer"
