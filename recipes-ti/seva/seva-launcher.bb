@@ -1,8 +1,8 @@
-PR = "r2"
+PR = "r1"
 SUMMARY = "Seva Launcher Golang Binary"
 
-LICENSE = "TI-TFL"
-LIC_FILES_CHKSUM = "file://${COREBASE}/../meta-ti/meta-ti-bsp/licenses/TI-TFL;md5=a1b59cb7ba626b9dbbcbf00f3fbc438a"
+LICENSE = "TI-TSPA"
+LIC_FILES_CHKSUM = "file://${COREBASE}/../meta-myir/meta-myir-bsp/licenses/TI-TSPA;md5=bb6bc27cd44417c389a180bd62f552a0"
 
 COMPATIBLE_MACHINE = "am62xx"
 PACKAGE_ARCH = "${MACHINE_ARCH}"

@@ -1,18 +1,18 @@
-PR = "r9"
+PR = "r6"
 
 DESCRIPTION = "ti-apps-launcher service"
 HOMEPAGE = "https://github.com/TexasInstruments/ti-apps-launcher"
 
 COMPATIBLE_MACHINE = "am62xx"
 
-LICENSE = "TI-TFL"
-LIC_FILES_CHKSUM = "file://${WORKDIR}/git/LICENSE;md5=5c3a7f5f6886ba6f33ec3d214dc7ab4c"
+LICENSE = "TI-TSPA"
+LIC_FILES_CHKSUM = "file://${COREBASE}/../meta-myir/meta-myir-bsp/licenses/TI-TSPA;md5=bb6bc27cd44417c389a180bd62f552a0"
 
 DEPENDS = "qtbase qtquick3d qtmultimedia"
 RDEPENDS:${PN} = "qtquick3d qtmultimedia bash"
 
 BRANCH = "master"
-SRCREV = "d6ce824480d76862ba3bdfead3aae82d2dad39ad"
+SRCREV = "a9064a2513ffe0c6536c38c5feb059c6113490ca"
 
 SRC_URI = " \
     git://github.com/TexasInstruments/ti-apps-launcher.git;protocol=https;branch=${BRANCH} \
@@ -22,12 +22,10 @@ SRC_URI = " \
 S = "${WORKDIR}/git"
 
 APPS_DEFINES = ""
-APPS_DEFINES:am62xx-evm = "SOC_AM62"
-APPS_DEFINES:am62xx-lp-evm = "SOC_AM62_LP"
+APPS_DEFINES:am62xx = "SOC_AM62"
 
 CONFIG_FILE = ""
-CONFIG_FILE:am62xx-evm = "am62xx-evm"
-CONFIG_FILE:am62xx-lp-evm = "am62xx-lp-evm"
+CONFIG_FILE:am62xx = "am62xx-evm"
 
 inherit qmake5 deploy systemd
 

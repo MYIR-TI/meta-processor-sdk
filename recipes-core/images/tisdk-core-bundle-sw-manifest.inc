@@ -189,7 +189,7 @@ EOF
 
         if [ "$extra_files" == "1" ]
         then
-            source="$source"" <br>Files from:<br><a href=git://arago-project.org/git/meta-arago.git>git://arago-project.org/git/meta-arago.git</a><br><a href=git://arago-project.org/git/meta-ti.git>git://arago-project.org/git/meta-ti.git</a>"
+            source="$source"" <br>Files from:<br><a href=git://arago-project.org/git/meta-arago.git>git://arago-project.org/git/meta-arago.git</a><br><a href=git://arago-project.org/git/meta-myir.git>git://arago-project.org/git/meta-myir.git</a>"
         fi
 
         case "$package" in
